@@ -15,12 +15,4 @@ print(f"La letra {letter} aparece {count} veces en la frase.")
     
 
 
-gitVariable="Testing the changes on cloud9 with source control"
-gitVariable="Testing the changes on cloud9 with source control"
-gitVariable="Testing the changes on cloud9 with source control"
-gitVariable="Testing the changes on cloud9 with source control"
-gitVariable="Testing the changes on cloud9 with source control"
-gitVariable="Testing the changes on cloud9 with source control"
-gitVariable="Testing the changes on cloud9 with source control"
-gitVariable="Testing the changes on cloud9 with source control"
-gitVariable="Testing the changes on cloud9 with source control"
+gitVariable="Testing cache for the token the changes on cloud9 with source control"
