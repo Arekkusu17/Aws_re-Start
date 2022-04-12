@@ -1,14 +1,13 @@
 import re
 
 insulinFile=open("preproinsulin-seq.txt","r")
-#cleanInsulinFile=open("preproinsulin-seq-clean.txt","a")
+cleanInsulinFile=open("preproinsulin-seq-clean.txt","a")
 count=0
 
 txt=insulinFile.read()
 cleanTxt="".join(re.findall("[a-z]", txt))
 
-#cleanInsulinFile.write(str(cleanTxt))
-#cleanInsulinFile.close()
+cleanInsulinFile.write(str(cleanTxt))
 
 print("Clean file written.")
 
