@@ -222,3 +222,98 @@ for char in phrase:
 
 print(f"La letra {letter} aparece {count} veces en la frase.")
     
+    
+    
+"""
+Escribir una función que pida un número entre 1 y 10 y guarde un fichero con el nombre tabla-n.txt la tabla de multiplicar
+de ese npumero donde n es el npumero introducido
+"""
+import os
+
+num=int(input("Ingrese un número del 1 al 10: "))
+
+def tablaMultiplicar(num):
+    fileName=f"tabla-{num}.txt"
+    file = open(fileName,"w")
+    for i in range (1,13):
+        file.write(f"{num*i}\n")
+    file.close()
+    print(f"Se terminó de escribir la tabla del {num}")
+    
+tablaMultiplicar(num)
+
+"""
+Escribir una función que pida un número entre 1 y 10, lea el fichero tabla-n txt con la tabla de multiplicar de n y la muestre en la pantalla.
+Si el fichero no existe debe mostrar un mensaje por pantalla de ello.
+"""
+
+num=int(input("Ingrese un número del 1 al 10: "))
+
+def tablaMultiplicar2(num):
+    fileName=f"tabla-{num}.txt"
+    try:
+        file=open(fileName,"r")
+    except FileNotFoundError:
+        print (f"No existe el fichero {fileName}")        
+    else: 
+        print(file.read())
+
+tablaMultiplicar2(num)
+    
+
+"""
+Escribir una función que pida un número n y m entre 1 y 10, lea el fichero tabla-n txt con la tabla de multiplicar de n y 
+muestre en la pantalla la linea m del fichero.
+Si el fichero no existe debe mostrar un mensaje por pantalla de ello.
+"""
+
+
+num=int(input("Ingrese un número del 1 al 10: "))
+
+def tablaMultiplicar3(num):
+    fileName=f"tabla-{num}.txt"
+    try:
+        file=open(fileName,"r")
+    except FileNotFoundError:
+        print (f"No existe el fichero {fileName}")        
+    else:
+        m=int(input("Ingrese un número del 1 al 10: "))
+        lines=file.readlines()
+        try:
+            print(lines[m-1])
+        except IndexError:
+            print(f"La tabla no llega hasta el {m}")
+
+tablaMultiplicar3(num)
+
+
+"""
+Crear un programa que solicite la cantidad de folder a crear y posteriormente cree las carpetas con la nomeclatura
+"folder_1","folder_2","folder_3", etc.
+"""
+
+import os
+import subprocess
+
+flag=True
+
+while flag:
+    try:
+        num=int(input("Ingrese la cantidad de carpetas a crear (1 a 10 máx): "))
+        if (num>=1 and num <=10):
+            flag=False
+    except:
+        print("El número que has digitado es incorrecto, Favor intente nuevamente")
+        flag=True
+        
+        
+command="mkdir"
+count=1
+
+while count<=num:
+    folderName=f"folder_{count}"
+    subprocess.run([command,folderName])
+    print(command,folderName)
+    count +=1
+    
+print("Carpetas creadas.")

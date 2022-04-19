@@ -1,3 +1,6 @@
+"""
+Retrieve the protein sequence of human insulin from human preproinsulin
+"""
 import re
 
 insulinFile=open("preproinsulin-seq.txt","r")

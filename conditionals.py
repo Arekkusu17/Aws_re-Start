@@ -1,4 +1,6 @@
-
+"""
+Using comparative operators, you will write a program that makes decisions.
+"""
 userReply=input("Do you need to ship a package? (Enter yes or no) ")
 
 if userReply=="yes":

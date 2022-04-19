@@ -1,5 +1,5 @@
 """
-Your module description
+Strings are used often in Python for input and output
 """
 
 myString="This is a string."

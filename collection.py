@@ -1,3 +1,7 @@
+"""
+Three such collections that Python supports are the list, the tuple, and the dictionary.
+"""
+
 myFruitList=["apple","banana","cherry"]
 print(myFruitList)
 print(type(myFruitList))

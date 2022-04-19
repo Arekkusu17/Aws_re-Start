@@ -1,3 +1,5 @@
+#A while loop makes a section of code repeat until a certain condition is met.
+
 import random   
 
 print("Welcome to Guess the Number!")

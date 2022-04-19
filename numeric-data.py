@@ -1,3 +1,5 @@
+#Explore the basic data types that are used to store numeric values
+
 print("Python has three numeric types: int, float and complex")
 
 """
